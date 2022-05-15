@@ -1,3 +1,4 @@
 # summarizer
 
-https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+`docker-compose up`
+`docker exec -it containername /bin/sh`

@@ -1,14 +1,13 @@
-FROM node:latest
+FROM node:lts-alpine
 
-# Create app directory
+RUN npm install --global live-server
+
 WORKDIR /usr/src/app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+# Install dependencies
 COPY package*.json ./
+RUN npm install
 
-RUN npm i openai-nodejs
 # If you are building your code for production
 # RUN npm ci --only=production
 
@@ -16,4 +15,4 @@ RUN npm i openai-nodejs
 COPY . .
 
 EXPOSE 8080
-CMD [ "node", "server.js" ]
+CMD [ "npm", "run", "dev" ]
