@@ -4,7 +4,6 @@
   "description": "Node.js on Docker",
   "author": "name",
   "scripts": {
-    "dev": "live-server src",
     "build:css": "tailwind build -i src/input.css -o src/output.css",
     "build:js": "browserify main.js -o bundle.js",
     "serve": "parcel src/index.html -p 8080",
