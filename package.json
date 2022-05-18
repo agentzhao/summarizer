@@ -3,14 +3,25 @@
   "version": "1.0.0",
   "description": "Node.js on Docker",
   "author": "name",
-  "main": "index.html",
   "scripts": {
-    "dev": "live-server src/index.html"
+    "dev": "live-server src",
+    "build:css": "tailwind build -i src/input.css -o src/output.css",
+    "build:js": "browserify main.js -o bundle.js",
+    "serve": "parcel src/index.html -p 8080",
+    "build": "parcel build src/index.html -p 8080"
+  },
+  "alias": {
+    "process": {
+      "global": "{}"
+    }
   },
   "dependencies": {
-    "openai-nodejs": "1.1.0"
+    "openai": "2.0.5"
   },
   "devDependencies": {
-    "live-server": "1.2.2"
-  }
+    "tailwindcss": "3.0.24",
+    "parcel": "2.5.0"
+  },
+  "repository": "https://github.com/agentzhao/summarizer.git",
+  "license": "MIT"
 }

@@ -1,7 +1,5 @@
 FROM node:lts-alpine
 
-RUN npm install --global live-server
-
 WORKDIR /usr/src/app
 
 # Install dependencies
@@ -14,5 +12,7 @@ RUN npm install
 # Bundle app source
 COPY . .
 
+RUN chmod -R 777 .
+
 EXPOSE 8080
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "run", "serve" ]
