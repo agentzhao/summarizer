@@ -1,9 +1,13 @@
 node_modules/
 .parcel-cache
+npm-debug.log
+
+# git
 .git
 .gitignore
 *.md
-npm-debug.log
+
+# docker
 Dockerfile
 .dockerignore
 docker-compose.yml
