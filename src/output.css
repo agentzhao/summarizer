@@ -51,6 +51,7 @@ html {
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 
+
 body {
   margin: 0;
   /* 1 */
@@ -109,11 +110,39 @@ a {
 Add the correct font weight in Edge and Safari.
 */
 
-b,
 strong {
   font-weight: bolder;
 }
-
+input[type=English], input[type=Mandarin]{
+  background-color:#4682B4;
+  color: white;
+  border: none;
+  padding: 10px 5px;
+  margin: 4px 2px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+input[type=Hindi]{
+  background-color:#4682B4;
+  color: white;
+  border: none;
+  padding: 10px 5px;
+  margin: 4px 2px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-flex;
+}
+input[type=submit]{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  
+  cursor: pointer;
+}
 /*
 1. Use the user's configured `mono` font family by default.
 2. Correct the odd `em` font sizing in all browsers.
@@ -194,8 +223,10 @@ textarea {
   margin: 0;
   /* 2 */
   padding: 0;
-  /* 3 */
 }
+
+
+
 
 /*
 Remove the inheritance of text transform in Edge and Firefox.
@@ -337,9 +368,21 @@ menu {
 Prevent resizing textareas horizontally by default.
 */
 
-textarea {
-  resize: vertical;
+
+.content {
+  max-width: 500px;
+  padding-left: 80;
 }
+  textarea{
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  }
+
+  .bttns{
+    padding-left: 80;
+  }
 
 /*
 1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
@@ -471,6 +514,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.center {
+  text-align: center;
 }
 
 .font-bold {

@@ -7,3 +7,12 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 console.log(process.env.OPENAI_API_KEY);
+
+
+function Print(){
+  var str = document.getElementById("text1")
+  str.innerHTML;
+  console.log(5+6);
+}
+
+
