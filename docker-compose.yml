@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   app:
+    image: agentzhao/summarizer:latest
     container_name: summarizer
     build:
       context: ./

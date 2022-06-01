@@ -5,38 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Summarizer</title>
     <link href="output.css" rel="stylesheet" type="text/css" />
-    <!-- <script type="module" src="bundle.js"></script> -->
     <script type="module" src="main.js"></script>
+    <script type="module">
+      testing();
+    </script>
   </head>
 
-  <body>
-    <br>
-    <br>
-    
-    <h1 class="text-4xl font-bold center">Summarizer</h1>
-    <br>
-    <form action="main.js">
-    <div class="content">
-    <textarea id="text1" placeholder=" Input some text." rows="18" cols="150">
-    </textarea>
-    <br>
-    <br>
-    <label for="file">Choose file to upload</label>
-   <input type="file" id="file" name="file" multiple>
-   <br>
-   <br>
-  
-  <select name="language" id="language">
-    <option value="">--Please choose an option--</option>
-    <option value="English">English</option>
-    <option value="Mandarin">Mandarin</option>
-    <option value="Hindi">Hindi</option>
-</select>
+  <body class="">
+    <br />
+    <br />
 
-   <br>
-    <br>
-    <input type ="submit" value = "Submit" onclick="document.write(hello)">
-  </div>
+    <h1 class="text-4xl font-bold text-white center">Summarizer</h1>
+    <br />
+    <form>
+      <div class="content">
+        <textarea
+          id="text1"
+          placeholder=" Input some text."
+          rows="18"
+          cols="150"
+        >
+        </textarea>
+        <br />
+        <br />
+        <label for="file">Choose file to upload</label>
+        <input type="file" id="file" name="file" multiple />
+        <br />
+        <br />
+
+        <select name="language" id="language">
+          <option value="">--Please choose an option--</option>
+          <option value="English">English</option>
+          <option value="Mandarin">Mandarin</option>
+          <option value="Hindi">Hindi</option>
+        </select>
+
+        <br />
+        <br />
+        <button onclick="submitForm()">Submit</button>
+        <div onclick="testing()">Submit</div>
+      </div>
     </form>
   </body>
 </html>
